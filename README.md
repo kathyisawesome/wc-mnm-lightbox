@@ -8,7 +8,22 @@ Experimental mini-extension for [WooCommerce Mix and Match](https://woocommerce.
 
 ### Usage
 
-There is nothing to configure. Activating the plugin automatically adds a lightbox to every child image.
+Your theme must support WooCommerce 3.0-style galleries. If it does not, then the thumbnails will not launch a lightbox. In order to declare support for WooCommerce and all galleries you can use the following snippet:
+
+```
+/**
+ * Declare support for WooCommerce and WooCommerce 3.0 Galleries
+ */
+function kia_woocommerce_support() {
+	add_theme_support( 'woocommerce' );
+	add_theme_support( 'wc-product-gallery-zoom' );
+	add_theme_support( 'wc-product-gallery-lightbox' );
+	add_theme_support( 'wc-product-gallery-slider' );
+}
+add_action( 'after_setup_theme', 'kia_woocommerce_support' ); 
+```
+
+There is nothing else to configure. Activating the plugin automatically adds a lightbox to every child image _if_ your theme supports `wc-product-gallery-lightbox`.
 
 ### Important
 
