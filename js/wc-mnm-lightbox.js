@@ -15,7 +15,7 @@
 		 */
 		this.init_photoswipe = function() {
 
-			this.$child_images.each( function() { console.log('found');
+			this.$child_images.each( function() {
 				
 				$(this).wc_product_gallery( { zoom_enabled: false, flexslider_enabled: false } );
 
@@ -33,7 +33,7 @@
 		};
 
 		// Init PhotoSwipe if present.
-		if ( typeof PhotoSwipe !== 'undefined' && 'yes' === WC_MNM_LIGHTBOX_PARAMS.photoswipe_enabled ) {
+		if ( typeof PhotoSwipe !== 'undefined' ) {
 			this.init_photoswipe();
 		}
 

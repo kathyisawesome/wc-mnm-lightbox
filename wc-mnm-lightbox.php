@@ -58,13 +58,11 @@ class WC_MNM_Lightbox {
 	 * @return void
 	 */
 	public static function load_scripts() {
-		wp_enqueue_script( 'wc-mnm-lightbox', plugins_url( 'js/wc-mnm-lightbox.js', __FILE__ ), array( 'wc-add-to-cart-mnm' ), self::VERSION, true );
 
-		$params = array(
-			'photoswipe_enabled'           => current_theme_supports( 'wc-product-gallery-lightbox' ) ? 'yes' : 'no'
-		);
+		if( current_theme_supports( 'wc-product-gallery-lightbox' ) ) {
+			wp_enqueue_script( 'wc-mnm-lightbox', plugins_url( 'js/wc-mnm-lightbox.js', __FILE__ ), array( 'wc-add-to-cart-mnm' ), self::VERSION, true );
+		}
 
-		wp_localize_script( 'wc-mnm-lightbox', 'WC_MNM_LIGHTBOX_PARAMS', $params );
 	}
 
 	/*-----------------------------------------------------------------------------------*/
