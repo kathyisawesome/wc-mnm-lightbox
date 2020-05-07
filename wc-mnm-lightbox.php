@@ -2,7 +2,7 @@
 /**
  * Plugin Name: WooCommerce Mix and Match: Lightbox
  * Plugin URI: http://www.woocommerce.com/products/woocommerce-mix-and-match-products/
- * Version: 1.0.0-beta-1
+ * Version: 1.0.0-beta-2
  * Description: Add pop-up lightbox for child products. 
  * Author: Kathy Darling
  * Author URI: http://kathyisawesome.com/
@@ -26,7 +26,7 @@ class WC_MNM_Lightbox {
 	/**
 	 * constants
 	 */
-	CONST VERSION = '1.0.0-beta-1';
+	CONST VERSION = '1.0.0-beta-2';
 
 
 	/**
