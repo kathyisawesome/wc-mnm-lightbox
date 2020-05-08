@@ -14,13 +14,12 @@
  * @author  Kathy Darling
  * @package WooCommerce Mix and Match/Templates
  * @since   1.0.0
- * @version 1.3.3
  */
 if ( ! defined( 'ABSPATH' ) ){
 	exit; // Exit if accessed directly
 }
 ?>
-<div class="mnm_child_product_images images mnm_image"><?php
+<div class="mnm_child_product_images mnm_image"><?php
 
 	if ( has_post_thumbnail( $mnm_item->get_id() ) ) {
 
